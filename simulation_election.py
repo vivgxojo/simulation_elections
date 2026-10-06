@@ -36,10 +36,22 @@ def transformer_votes(votes:dict)->dict:
     # Todo : écrire le code de la fonction
     pass
 
+def determiner_resultats(pourcentages:dict)->tuple:
+    """
+    Déterminer le gagnant, s'il est minoritaire ou majoritaire, et l'opposition
+    :param pourcentages: le dictionnaire avec le % de votes par parti
+    :return: un tuple contenant (gagnant, majoritaire (oui/non), opposition)
+    """
+    # Todo : écrire le code de la fonction
+    pass
+
 if __name__ == "__main__":
     ls_votes = input("Entrez les bulletins de votes (Ex: PQ, PQ, PLQ, QS...) : ").split(", ")
     dict_votes = comptabiliser_votes(ls_votes)
     dict_pourcentages = transformer_votes(dict_votes)
     print(dict_votes)
     print(dict_pourcentages)
-    # Todo : afficher gagnant, minoritaire ou majoritaire, opposition
+    gagnant, majoritaire, opposition = determiner_resultats(dict_pourcentages)
+    print("Gagnant :", gagnant)
+    print("Majoritaire :", majoritaire)
+    print("Opposition :", opposition)
